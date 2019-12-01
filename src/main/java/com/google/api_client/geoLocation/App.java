@@ -23,7 +23,7 @@ public class App
     public static void main( String[] args )  {
         System.out.println( "Hello World! " ); // just to check whether
         try {
-            URL url = new URL("https://maps.googleapis.com/maps/api/geocode/json?address=George+Mason+University&key=AIzaSyCkf0g-y0n_OWMG5FXaSHBwOYpiNeiC3oY");
+            URL url = new URL("https://maps.googleapis.com/maps/api/geocode/json?address=George+Mason+University&key=API_KEY");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
 
