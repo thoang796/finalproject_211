@@ -1,0 +1,56 @@
+package com.google.api_client.geoLocation;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.JSpinner;
+import javax.swing.JLabel;
+import java.awt.Component;
+import javax.swing.SpinnerModel;
+import javax.swing.JComboBox;
+import java.awt.Font;
+
+
+public class DropdownBox extends JFrame {
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("GMU Locations");
+	    frame.setVisible(true);
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setSize(500, 500);
+	    frame.setLocation(430, 200);
+	    //frame.setLayout(null); // allows you to put things where you like
+	    JPanel panel = new JPanel();
+	    
+	    frame.add(panel);
+	    
+	    
+	    // the title box. 
+	    JLabel title = new JLabel("GMU Location Finder");
+	    title.setFont(new Font("gabriola", Font.BOLD, 30));
+	   
+	    title.setVisible(true);
+	    panel.add(title);
+	    
+	    // directions
+	    JLabel ins = new JLabel("Please select a location.");
+	    ins.setFont(new Font("gabriola", Font.ITALIC, 20));
+	   
+	    ins.setVisible(true);
+	    panel.add(ins);
+	    
+	    // the dropdown menu
+	    String[] choices = {"Center for the Arts","Eagle Bank Arena","Fenwick","Field House","Ike's","Johnson Center", "Masonvale", "Merten Hall","RAC", "West Campus parking"};
+	    final JComboBox<String> cb = new JComboBox<String>(choices);
+	    cb.setMaximumSize(cb.getPreferredSize()); // added code
+	    cb.setAlignmentX(Component.CENTER_ALIGNMENT);// added code
+	    cb.setVisible(true);
+	    panel.add(cb);
+	    
+	    // GO Button
+	    JButton btn = new JButton("GO");
+	    btn.setAlignmentX(Component.CENTER_ALIGNMENT); // added code
+	    panel.add(btn);
+	    
+	}
+	
+}
